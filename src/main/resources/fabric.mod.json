@@ -1,0 +1,36 @@
+{
+	"schemaVersion": 1,
+	"id": "kiwimod",
+	"version": "${version}",
+	"name": "Kiwi Mod",
+	"description": "Kiwi Mod by Pavel Fokin for CAS",
+	"authors": [
+		"Kaupenjoe!"
+	],
+	"license": "MIT",
+	"icon": "assets/kiwimod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.chert.kiwimod.KiwiMod"
+		],
+		"fabric-datagen": [
+			"net.chert.kiwimod.KiwiModDataGenerator"
+		],
+		"client": [
+			"net.chert.kiwimod.KiwiModClient"
+		]
+	},
+	"mixins": [
+		"kiwimod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
