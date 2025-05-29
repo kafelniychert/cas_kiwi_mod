@@ -1,7 +1,10 @@
 package net.chert.kiwimod;
 
+import net.chert.kiwimod.entity.ModEntities;
+import net.chert.kiwimod.entity.custom.KiwiEntity;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,6 +15,7 @@ public class KiwiMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		ModEntities.registerModEntities();
+		FabricDefaultAttributeRegistry.register(ModEntities.KIWI, KiwiEntity.createAttributes());
 	}
 }
